@@ -6,21 +6,27 @@ public class SearchDemo {
 
     public static void main(String[] args) {
 
-        int[] A = {3, 2, 5, 7, 3};
-        int[] B = {7, 7, 7};
-        int[] C = {2};
-        int[] D = {};
+        // -----------------------
+        // DATASETS DEL TALLER
+        // -----------------------
+        int[] A = {8, 3, 6, 3, 9};
+        int[] B = {5, 4, 3, 2, 1};
+        int[] C = {1, 2, 3, 4, 5};
+        int[] D = {2, 2, 2, 2};
+        int[] E = {9, 1, 8, 2};
 
         // -------------------------------
-        // PRIMERA Y ÚLTIMA OCURRENCIA A
+        // PRIMERA Y ÚLTIMA OCURRENCIA EN A
         // -------------------------------
         System.out.println("Arreglo A: " + Arrays.toString(A));
-        System.out.println("Primera ocurrencia en A de 3 → " + SearchAlgorithms.indexOfFirst(A, 3));
-        System.out.println("Última ocurrencia en A de 3 → " + SearchAlgorithms.indexOfLast(A, 3));
+        System.out.println("Primera ocurrencia en A de 3 → " +
+                SearchAlgorithms.indexOfFirst(A, 3));
+        System.out.println("Última ocurrencia en A de 3 → " +
+                SearchAlgorithms.indexOfLast(A, 3));
         System.out.println();
 
         // -------------------------------
-        // FINDALL EN A (PARES)
+        // FINDALL EN A (pares)
         // -------------------------------
         System.out.println("findAll pares en A");
         System.out.println("Arreglo usado: " + Arrays.toString(A));
@@ -31,36 +37,40 @@ public class SearchDemo {
         // -------------------------------
         // CENTINELA EN B
         // -------------------------------
-        System.out.println("Arreglo B: " + Arrays.toString(B));
-        System.out.println("Centinela búsqueda 7 en B → " +
-                SearchAlgorithms.sentinelSearch(B, 7));
+        System.out.println("Arreglo B (inverso): " + Arrays.toString(B));
+        System.out.println("Centinela búsqueda 3 en B → " +
+                SearchAlgorithms.sentinelSearch(B, 3));
         System.out.println();
 
         // -------------------------------
-        // BINARY SEARCH EN A (ORIGINAL + ORDENADO)
+        // BINARY SEARCH EN C (YA ORDENADO)
         // -------------------------------
-        int[] A_copy = Arrays.copyOf(A, A.length);
-        System.out.println("BinarySearch 5 en A");
-        System.out.println("Arreglo original: " + Arrays.toString(A_copy));
-
-        Arrays.sort(A_copy);
-        System.out.println("Arreglo ordenado: " + Arrays.toString(A_copy));
-
-        System.out.println("Resultado binarySearch(5) → " +
-                SearchAlgorithms.binarySearch(A_copy, 5));
+        System.out.println("BinarySearch 4 en C");
+        System.out.println("Arreglo ordenado C: " + Arrays.toString(C));
+        System.out.println("Resultado binarySearch(4) → " +
+                SearchAlgorithms.binarySearch(C, 4));
         System.out.println();
 
         // -------------------------------
-        // USAR C Y D TAMBIÉN EN BÚSQUEDAS
+        // BINARY SEARCH EN E (ORIGINAL + ORDENADO)
         // -------------------------------
-        System.out.println("Arreglo C: " + Arrays.toString(C));
-        System.out.println("binarySearch(2) en C (ordenado) → " +
-                SearchAlgorithms.binarySearch(C, 2));
+        System.out.println("BinarySearch 8 en E");
+        System.out.println("Arreglo original: " + Arrays.toString(E));
+
+        int[] E_copy = Arrays.copyOf(E, E.length);
+        Arrays.sort(E_copy);
+        System.out.println("Arreglo ordenado: " + Arrays.toString(E_copy));
+
+        System.out.println("Resultado binarySearch(8) → " +
+                SearchAlgorithms.binarySearch(E_copy, 8));
         System.out.println();
 
-        System.out.println("Arreglo D: " + Arrays.toString(D));
-        System.out.println("findAll en D (pares) → " +
-                SearchAlgorithms.findAll(D, x -> x % 2 == 0));
+        // -------------------------------
+        // FINDALL EN D (duplicados)
+        // -------------------------------
+        System.out.println("Arreglo D (duplicados): " + Arrays.toString(D));
+        System.out.println("findAll de valores == 2 → " +
+                SearchAlgorithms.findAll(D, x -> x == 2));
         System.out.println();
 
         // -------------------------------
@@ -101,7 +111,6 @@ public class SearchDemo {
             current = current.next;
             pos++;
         }
-        return -1; // no debería pasar
+        return -1;
     }
-
 }
