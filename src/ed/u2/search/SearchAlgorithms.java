@@ -6,7 +6,7 @@ import java.util.function.Predicate;
 
 public class SearchAlgorithms {
 
-    // Primera ocurrencia array
+    // Primera ocurrencia Array
     public static int indexOfFirst(int[] a, int key) {
         for (int i = 0; i < a.length; i++) {
             if (a[i] == key)
@@ -15,7 +15,7 @@ public class SearchAlgorithms {
         return -1;
     }
 
-    // Primera ocurrencia sll
+    // Primera ocurrencia SLL
     public static Node findFirst(Node head, int key) {
         Node cur = head;
         while (cur != null) {
@@ -26,7 +26,7 @@ public class SearchAlgorithms {
         return null;
     }
 
-    // Ultima ocurrencia array
+    // Ultima ocurrencia Array
     public static int indexOfLast(int[] a, int key) {
         int last = -1;
         for (int i = 0; i < a.length; i++) {
@@ -35,7 +35,7 @@ public class SearchAlgorithms {
         return last;
     }
 
-    // Ultima ocurrencia ssl
+    // Ultima ocurrencia SLL
     public static Node findLast(Node head, int key) {
         Node cur = head;
         Node last = null;
@@ -47,7 +47,7 @@ public class SearchAlgorithms {
         return last;
     }
 
-    // Find all array
+    // Find all Array
     public static List<Integer> findAll(int[] a, IntPredicate p) {
         List<Integer> r = new ArrayList<>();
         for (int i = 0; i < a.length; i++) {
@@ -56,7 +56,7 @@ public class SearchAlgorithms {
         return r;
     }
 
-    // Find alll ssl
+    // Find alll SLL
     public static List<Node> findAll(Node head, Predicate<Node> p) {
         List<Node> r = new ArrayList<>();
         Node cur = head;
