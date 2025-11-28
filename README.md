@@ -67,6 +67,6 @@ cd Taller6-EstructuraDatos
 ### 8.3 Salida Esperada
 
 ## **Autores:**
-### [Ismael Gonzales](https://github.com/IsmaelGonz)
+### [Ismael Gonzalez](https://github.com/IsmaelGonz)
 ### [Juan Calopino](https://github.com/JuaaanCalopino)
 ### [Bryan Troya ](https://github.com/BrTrl3)
