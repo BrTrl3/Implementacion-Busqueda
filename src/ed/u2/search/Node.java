@@ -1,4 +1,5 @@
 package ed.u2.search;
+
 /**
  * Clase Node:
  * Representa un nodo de una Lista Enlazada Simple (SLL).
@@ -11,10 +12,11 @@ package ed.u2.search;
  * sobre estructuras dinámicas.
  */
 public class Node {
-    public int value; // Dato almacenado en el nodo
-    public Node next; // Enlace al siguiente nodo
 
-     /**
+    public int value;   // Dato almacenado en el nodo
+    public Node next;   // Enlace al siguiente nodo
+
+    /**
      * Constructor: crea un nodo con un valor específico.
      * @param value valor que contendrá el nodo
      */
